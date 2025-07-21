@@ -34,6 +34,17 @@ app.post('/api/track', (req, res) => {
   }
 });
 
+// Добавьте этот код в server.js
+app.delete('/api/track', (req, res) => {
+  try {
+    fs.writeFileSync(DATA_FILE, '[]');
+    res.json({ success: true });
+  } catch (error) {
+    console.error('Error clearing data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 // API для получения визитов (для админки)
 app.get('/api/track', (req, res) => {
   try {
