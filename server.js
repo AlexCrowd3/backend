@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors({
-  origin: ['https://ваш-фронтенд.twc1.net', 'http://localhost:3000']
+  origin: ['https://alexcrowd3-prime-team-landing-arena-2754.twc1.net', 'http://localhost:3000']
 }));
 app.use(express.json());
 
