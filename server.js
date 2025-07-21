@@ -60,5 +60,6 @@ app.get('/api/track', (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Сервер запущен на порту ${PORT}`);
+  console.log(`Сервер запущен на http://0.0.0.0:${PORT}`);
+  console.log(`Process ID: ${process.pid}`); // Добавьте эту строку
 });
