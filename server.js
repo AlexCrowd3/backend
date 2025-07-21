@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors({
-  origin: ['https://alexcrowd3-prime-team-landing-arena-2754.twc1.net', 'http://localhost:3000']
+  origin: ['https://alexcrowd3-prime-team-landing-arena-2754.twc1.net']
 }));
 app.use(express.json());
 
@@ -61,5 +61,4 @@ app.get('/api/track', (req, res) => {
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Сервер запущен на http://0.0.0.0:${PORT}`);
-  console.log(`Process ID: ${process.pid}`); // Добавьте эту строку
 });
